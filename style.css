@@ -17,6 +17,10 @@ Global Styles
   --clr-white: #fff;
   --clr-grey: grey;
   --clr-link-blue: #3681ad;
+  --clr-gold: gold;
+  --clr-orange: orange;
+  --clr-identity-blue: #3460e7;
+  --clr-identity-red: #ff3819;
   --clr-font: var(--clr-grey-10);
   --width-nav-icons: 3.5rem;
 }
@@ -38,7 +42,7 @@ i {
   margin-left: 5px;
 }
 i.selected {
-  color: gold;
+  color: var(--clr-gold);
 }
 ul {
   list-style-type: none;
@@ -82,6 +86,9 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-10);
+}
+span {
+  color: var(--clr-grey-5);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -129,6 +136,7 @@ p {
 } */
 .section {
   padding: 4.5rem 0;
+  padding-bottom: 2rem;
   background-color: var(--clr-grey-1);
 }
 .section-title {
@@ -153,30 +161,42 @@ p {
 }
 .user-img {
   border-radius: 50%;
-  overflow: hidden;
   width: 50px;
   height: 50px;
+  margin-right: 10px;
 }
-/* ====
+.user-img img {
+  border-radius: 50%;
+}
+/* ===============================================
 nav
-==== */
+=============================================== */
 
+/* 消息页 */
 nav {
   position: fixed;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
+  align-items: center;
   background-color: var(--clr-white);
   width: 100vw;
   margin: 0;
-  height: 4.25rem;
+  /* height: 4.25rem; */
+  height: 5rem;
+  border-bottom: solid 1px var(--clr-grey-1);
+  z-index: 2;
 }
 .nav-center {
   margin: 0.6rem 0;
   text-align: center;
   width: 95vw;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .left-icon,
 .right-icon {
@@ -185,7 +205,11 @@ nav {
   justify-content: space-between;
 }
 .left-icon {
-  visibility: hidden;
+  /* visibility: hidden; */
+  justify-self: flex-start;
+}
+.right-icon {
+  justify-self: flex-end;
 }
 .nav-text p {
   padding: 0;
@@ -198,13 +222,33 @@ nav {
 .nav-link.selected {
   border-bottom: solid 0.25rem red;
 }
-/* ===
+/* 首页 */
+nav.home {
+  grid-template-rows: 1fr;
+  height: 3.5rem;
+}
+.nav-text.home {
+  display: flex;
+  justify-content: center;
+}
+.nav-text.home p {
+  margin: 0 5px;
+}
+.nav-text.home .selected {
+  border-bottom: solid 0.25rem red;
+}
+.user-img.nav-photo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+/* ==============================================
 main-消息-@我的
-===*/
+===============================================*/
 .celections {
   /* position: absolute;
   top: 4rem; */
-
+  margin-top: 10px;
   padding: 0.5rem;
   height: 2.75rem;
 }
@@ -230,6 +274,7 @@ main-消息-@我的
   background-color: var(--clr-grey-1);
   padding: 10px;
 }
+
 .title {
   display: flex;
   justify-content: space-between;
@@ -246,8 +291,37 @@ main-消息-@我的
 .user-time {
   color: var(--clr-grey-5);
 }
-.user-img {
-  margin-right: 10px;
+
+section .user-img {
+  position: relative;
+}
+.user-img .identity {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  z-index: 1;
+  color: var(--clr-white);
+  border: solid 0.15rem var(--clr-white);
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(25%);
+}
+.identity.gold {
+  background-color: var(--clr-gold);
+}
+.identity.orange {
+  background-color: var(--clr-orange);
+}
+.identity.blue {
+  background-color: var(--clr-identity-blue);
+}
+.identity.red {
+  background-color: var(--clr-identity-red);
 }
 .user h4 {
   margin: 0;
@@ -255,10 +329,17 @@ main-消息-@我的
 .user span {
   font-size: 12px;
 }
-
+.message-info p {
+  margin: 0;
+}
 .original-text {
-  max-height: 3rem;
+  /* max-height: 3rem; */
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 /* pic部分，根据返回来的item数量设置class，
@@ -347,8 +428,13 @@ main-消息-@我的
 .original-info {
   height: 6rem;
   width: 6rem;
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
   margin-left: 10px;
   color: var(--clr-grey-5);
 }
@@ -380,12 +466,22 @@ main-消息-评论
   color: var(--clr-grey-5);
   height: 2.5rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
   margin-bottom: 10px;
 }
 /* ---iComment会缩略，很关键  且iComment中，没有回复标志*/
 .iComment .message-info {
   height: 3rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .iComment .comment-footer {
   display: none;
@@ -397,6 +493,11 @@ main-消息-赞
 .kudos .message-info {
   height: 3rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .totalKudos {
   background-color: var(--clr-white);
@@ -429,11 +530,54 @@ main-消息-私信
 }
 .chat .message-info {
   height: 1.5rem;
+  /* 以下设置超出自动变省略号 */
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
-/*=====
+/* 测试text-overflow: ellipsis;在文字本身有无效果；
+已知：在container上没有效果。
+结果：不生效 */
+/* .chat .message-info p {
+  text-overflow: ellipsis;
+} */
+/* ===
+main-主页-关注
+===*/
+section.home {
+  margin-top: 0;
+  /* fix的navbar有多宽，这个padding就有多长 */
+  padding-top: 3.5rem;
+}
+.home .message-info p {
+  margin-bottom: 5px;
+}
+
+.home .one-two-pic.one img {
+  height: auto;
+}
+/* ===
+main-主页-推荐
+===*/
+.celections.home {
+  margin-top: 0;
+  display: flex;
+  flex-shrink: 0;
+  column-gap: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+/* 隐藏滚动条 */
+.celections.home::-webkit-scrollbar {
+  display: none;
+}
+/*==================================================
  footer 
- ======*/
+==================================================*/
 .footer {
   display: block;
   position: fixed;

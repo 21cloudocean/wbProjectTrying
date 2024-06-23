@@ -10,39 +10,29 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="home">
     <div class="nav-center">
-      <div class="left-icon">
-        <!-- <i class="fa-solid fa-headphones"></i>
-              <i class="fa-solid fa-envelope"></i> -->
+      <div class="user-img nav-photo">
+        <img src="./pic.jpg" alt="">
+
       </div>
-      <div class="nav-text">
-        <p>消息</p>
+      <div class="nav-text home">
+        <p class="selected">关注<i class="fa-solid fa-caret-down"></i></p>
+        <p>推荐</p>
+
       </div>
       <div class="right-icon">
-        <i class="fa-solid fa-headphones"></i>
-        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-pen-to-square"></i>
       </div>
     </div>
-    <ul class="nav-links">
-      <li class="nav-link selected">@我的</li>
-      <li class="nav-link">评论</li>
-      <li class="nav-link">赞</li>
-      <li class="nav-link">私信</li>
-    </ul>
   </nav>
 
-  <section class="section messages">
+  <section class="section messages home">
     <!-- 按钮加了anchor用来做测试，之后删掉 -->
-    <div class="celections">
-      <a href="/infoPageAtWb.html"> <button class="celection btn selected" name="shareweibo"
-          data-id="shareweibo">@我的微博</button></a>
-      <a href="./infoPageAtComment.html"><button class="celection btn" name="sharecomment"
-          data-id="sharecomment">@我的评论</button></a>
-    </div>
     <div class="messages-container">
       <!-- single item -->
-      <article class="card message">
+      <article class="card message home">
         <div class="card-center">
           <div class="title">
             <div class="user">
@@ -60,6 +50,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -71,17 +62,17 @@
               atque at expedita.</p>
           </div>
 
-          <div class="original-img-container img-container one-two-pic"><img class="original-img" src="./pic.jpg"
+          <div class="original-img-container img-container one-two-pic one"><img class="original-img" src="./pic.jpg"
               alt=""></div>
 
 
         </div>
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -105,6 +96,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -125,10 +117,10 @@
 
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -152,6 +144,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -173,10 +166,10 @@
 
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -200,6 +193,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -223,10 +217,10 @@
 
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -250,6 +244,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -277,10 +272,10 @@
 
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -304,6 +299,7 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
               iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit reiciendis,
               minima adipisci, itaque nam.</p>
+            <span>查看翻译</span>
           </div>
         </div>
         <div class="message-original">
@@ -315,17 +311,17 @@
               atque at expedita.</p>
           </div>
 
-          <div class="original-img-container img-container one-two-pic"><img class="original-img" src="./pic.jpg"
+          <div class="original-img-container img-container one-two-pic one"><img class="original-img" src="./pic.jpg"
               alt=""></div>
 
         </div>
 
         <footer class="card-footer">
           <div class="card-footer-center">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <i class="fa-solid fa-comment"></i>
-            <i class="fa-solid fa-share-from-square"></i>
-            <i class="fa-solid fa-share-nodes"></i>
+            <span><i class="fa-solid fa-thumbs-up"></i> 999</span>
+            <span><i class="fa-solid fa-comment"></i> 999</span>
+            <span><i class="fa-solid fa-share-from-square"></i> 999</span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
           </div>
         </footer>
       </article>
@@ -335,9 +331,9 @@
 
   <footer class="footer">
     <div class="footer-icon">
-      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-house selected"></i>
       <i class="fa-solid fa-globe"></i>
-      <i class="fa-solid fa-bell selected"></i>
+      <i class="fa-solid fa-bell"></i>
       <i class="fa-solid fa-user"></i>
     </div>
   </footer>
