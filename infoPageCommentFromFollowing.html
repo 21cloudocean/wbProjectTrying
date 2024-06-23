@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>social media</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-center">
+      <div class="left-icon">
+        <i class="fa-solid fa-headphones"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="nav-text">
+        <p>消息</p>
+      </div>
+      <div class="right-icon">
+        <i class="fa-solid fa-headphones"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li class="nav-link">@我的</li>
+      <li class="nav-link selected">评论</li>
+      <li class="nav-link">赞</li>
+      <li class="nav-link">私信</li>
+    </ul>
+  </nav>
+
+  <section class="section messages">
+    <!-- 按钮加了anchor用来做测试，之后删掉 -->
+    <div class="celections">
+      <a href="./infoPageCommentReceived.html"> <button class="celection btn " name="commentReceived"
+          data-id="commentReceived">收到的评论</button></a>
+      <a href="./infoPageIComment.html"><button class="celection btn" name="iComment"
+          data-id="iComment">发出的评论</button></a>
+      <a href="./infoPageCommentFromFollowing.html"><button class="celection btn selected" name="commentFromFollowing"
+          data-id="commentFromFollowing">关注人的</button></a>
+    </div>
+    <div class="messages-container comments">
+      <!-- single item -->
+      <article class="card message comment">
+        <div class="card-center">
+          <div class="user-img img-container">
+            <img src="./pic.jpg" alt="">
+          </div>
+          <div class="text-content">
+            <div class="user-info">
+              <h4 class="user-name">user1</h4>
+              <span class="user-time">2022-02-02</span>
+            </div>
+            <div class="message-info">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
+                iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit
+                reiciendis,
+                minima adipisci, itaque nam.</p>
+            </div>
+            <div class="original-comment">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat velit autem
+                vero eveniet, eum atque nulla ea iste necessitatibus tenetur temporibus deleniti, quibusdam facere
+                maxime,
+                voluptas debitis consequuntur molestias magni.</p>
+            </div>
+            <div class="comment-footer"><i class="fa-solid fa-comment"></i> <span>回复</span></div>
+          </div>
+          <div class="original-info">
+            <img class="original-img" src="./pic.jpg" alt="">
+          </div>
+        </div>
+      </article>
+      <!--end of single item -->
+      <!-- single item -->
+      <article class="card message comment">
+        <div class="card-center">
+          <div class="user-img img-container">
+            <img src="./pic.jpg" alt="">
+          </div>
+          <div class="text-content">
+            <div class="user-info">
+              <h4 class="user-name">user1</h4>
+              <span class="user-time">2022-02-02</span>
+            </div>
+            <div class="message-info">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quia aperiam
+                iure ea omnis aliquid natus id eveniet, sit animi eaque magni consectetur harum reprehenderit
+                reiciendis,
+                minima adipisci, itaque nam.</p>
+            </div>
+            <div class="original-comment">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat velit autem
+                vero eveniet, eum atque nulla ea iste necessitatibus tenetur temporibus deleniti, quibusdam facere
+                maxime,
+                voluptas debitis consequuntur molestias magni.</p>
+            </div>
+            <div class="comment-footer"><i class="fa-solid fa-comment"></i> <span>回复</span></div>
+          </div>
+          <div class="original-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat velit autem
+              vero eveniet, eum atque nulla ea iste necessitatibus tenetur temporibus deleniti, quibusdam facere
+              maxime,
+              voluptas debitis consequuntur molestias magni.</p>
+          </div>
+        </div>
+      </article>
+      <!--end of single item -->
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-icon">
+      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-globe"></i>
+      <i class="fa-solid fa-bell selected"></i>
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+
+</html>
