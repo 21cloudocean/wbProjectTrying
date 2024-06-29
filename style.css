@@ -23,6 +23,7 @@ Global Styles
   --clr-identity-red: #ff3819;
   --clr-font: var(--clr-grey-10);
   --width-nav-icons: 3.5rem;
+  --border-thin-gray: solid 1px var(--clr-grey-1);
 }
 
 * {
@@ -50,6 +51,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 /* 因为navbar的logo不能block，因此用:not */
 /* img {
   width: 100%;
@@ -242,23 +244,57 @@ nav.home {
   height: 40px;
   margin-bottom: 5px;
 }
+/* 发现页 */
+nav.find .nav-center {
+  grid-template-columns: 1fr auto;
+}
+/* .nav-search {
+  width: 90vw;
+} */
+.nav-search {
+  position: relative;
+}
+.nav-search input {
+  width: 100%;
+  border-radius: 25px;
+  background-color: var(--clr-grey-1);
+  border: none;
+  padding: 5px;
+  /* 缩进 */
+  text-indent: 30px;
+}
+nav.find .right-icon {
+  width: calc(var(--width-nav-icons) / 2);
+  justify-content: flex-end;
+  align-items: center;
+}
+/* 搜索框的放大镜
+但是有个问题
+就是小框正好放进去了，页面变宽后放大镜会出来
+我把搜索框width从80vw改成100%就解决了 */
+nav.find .zoom {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.35rem;
+  color: var(--clr-grey-5);
+}
 /* ==============================================
 main-消息-@我的
 ===============================================*/
-.celections {
+.selections {
   /* position: absolute;
   top: 4rem; */
   margin-top: 10px;
   padding: 0.5rem;
   height: 2.75rem;
 }
-.celection {
+.selection {
   border-radius: 20px;
   height: 24px;
   font-size: 12px;
   padding: 0px 10px;
 }
-.celection.selected {
+.selection.selected {
   font-weight: 600;
 }
 .card {
@@ -450,7 +486,7 @@ section .user-img {
 .message.comment p {
   margin: 0.25rem 0;
 }
-.comment-footer {
+.comment-footer span {
   color: var(--clr-link-blue);
 }
 .comment-footer i {
@@ -510,6 +546,9 @@ main-消息-赞
 .totalKudos p {
   margin: 0;
 }
+.message-info span {
+  color: var(--clr-grey-10);
+}
 /* ====
 main-消息-私信
 ====*/
@@ -562,7 +601,7 @@ section.home {
 /* ===
 main-主页-推荐
 ===*/
-.celections.home {
+.selections.home {
   margin-top: 0;
   display: flex;
   flex-shrink: 0;
@@ -572,9 +611,136 @@ main-主页-推荐
   overflow-x: auto;
 }
 /* 隐藏滚动条 */
-.celections.home::-webkit-scrollbar {
+.selections.home::-webkit-scrollbar {
   display: none;
 }
+/* ===
+main-发现-超话
+===*/
+.selections-container {
+  margin-top: 10px;
+  display: flex;
+  flex-shrink: 0;
+  /* column-gap: 10px; */
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.selections-container::-webkit-scrollbar {
+  display: none;
+}
+
+.selections.chaohuas {
+  background-color: var(--clr-white);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100vw;
+  height: 8rem;
+  margin: 10px 0;
+  margin-top: 15px;
+  padding: 5px;
+  padding-right: 10px;
+}
+.selections p {
+  margin: 0;
+}
+.selection-intro {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--border-thin-gray);
+}
+.selections .intro-right {
+  color: var(--clr-link-blue);
+}
+.selections .chaohua-img {
+  position: relative;
+  border: var(--border-thin-gray);
+}
+.selections.chaohuas .chaohua-img {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.selections.chaohuas .chaohua-img img {
+  border-radius: 5px;
+}
+.selections.chaohuas .chaohua-img .identity {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* border-radius: */
+  z-index: 1;
+  padding: 2px;
+  color: var(--clr-white);
+  /* border: solid 0.15rem var(--clr-white); */
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0;
+}
+.chaohua-title {
+  display: flex;
+}
+.chaohua-title h4 {
+  margin: 0;
+}
+.card .chaohua-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.card .chaohua-img img {
+  border-radius: 50%;
+}
+.chaohua-info {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-content: space-between;
+}
+.card .chaohua-img {
+  position: relative;
+}
+.card .chaohua-img .identity {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  z-index: 1;
+  color: var(--clr-white);
+  border: solid 0.15rem var(--clr-white);
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(25%);
+}
+.user-link {
+  color: var(--clr-link-blue);
+}
+.user-link:visited {
+  color: var(--clr-link-blue);
+}
+/* ===
+main-发现-热门
+===*/
+.selections.find {
+  margin-top: 10px;
+  display: flex;
+  flex-shrink: 0;
+  column-gap: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.selections.find::-webkit-scrollbar {
+  display: none;
+}
+
 /*==================================================
  footer 
 ==================================================*/

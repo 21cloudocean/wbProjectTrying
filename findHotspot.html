@@ -10,26 +10,27 @@
 </head>
 
 <body>
-  <nav class="home">
+  <nav class="find">
     <div class="nav-center">
-      <div class="user-img nav-photo">
-        <img src="./pic.jpg" alt="">
-
-      </div>
-      <div class="nav-text home">
-        <p>关注<i class="fa-solid fa-caret-down"></i></p>
-        <p class="selected">推荐</p>
-
+      <div class="nav-text">
+        <div class="nav-search">
+          <i class="zoom fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search" placeholder="大家都在搜：你猜猜我在搜什么">
+        </div>
       </div>
       <div class="right-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-pen-to-square"></i>
+        <i class="fa-solid fa-list-check"></i>
       </div>
     </div>
+    <ul class="nav-links">
+      <li class="nav-link">趋势</li>
+      <li class="nav-link">超话</li>
+      <li class="nav-link selected">热门</li>
+    </ul>
   </nav>
 
-  <section class="section messages home">
-    <div class="selections home">
+  <section class="section messages find hotspot">
+    <div class="selections find hotspot">
       <button class="selection btn selected" name="commentReceived" data-id="commentReceived">热门</button><button
         class="selection btn " name="commentReceived" data-id="commentReceived">文化之夜</button><button
         class="selection btn " name="commentReceived" data-id="commentReceived">榜单</button><button
@@ -42,7 +43,7 @@
     <div class="messages-container">
       <!-- single item -->
       <!-- 原创wb 非转发 生成时是否原创可以由if else解决-->
-      <article class="card message home">
+      <article class="card message find hotspot">
         <div class="card-center">
           <div class="title">
             <div class="user">
@@ -79,7 +80,7 @@
       </article>
       <!--end of single item -->
       <!-- single item -->
-      <article class="card message">
+      <article class="card message find hotspot">
         <div class="card-center">
           <div class="title">
             <div class="user">
@@ -284,8 +285,8 @@
 
   <footer class="footer">
     <div class="footer-icon">
-      <i class="fa-solid fa-house selected"></i>
-      <i class="fa-solid fa-globe"></i>
+      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-globe selected"></i>
       <i class="fa-solid fa-bell"></i>
       <i class="fa-solid fa-user"></i>
     </div>
