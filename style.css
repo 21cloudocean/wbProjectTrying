@@ -675,10 +675,17 @@ main-发现-趋势
 .trend .part-intro .intro-left {
   color: var(--clr-grey-5);
 }
+.intro-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+}
 .optional {
   background-color: var(--clr-white);
-  padding: 0 5px;
+  padding: 0 10px;
   margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 .optional a:visited {
   color: var(--clr-link-blue);
@@ -687,6 +694,7 @@ main-发现-趋势
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
+  padding: 5px 0;
 }
 .trend-tag {
   display: flex;
@@ -764,6 +772,30 @@ main-发现-趋势
 }
 .vip-purchase-link {
   color: var(--clr-gold);
+}
+.usually-visit-container {
+  padding: 10px 0;
+  display: flex;
+}
+.usually-visit-card {
+  display: grid;
+  grid-template-rows: 1fr, auto;
+}
+.visit-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.selection-text {
+  width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 /* ===
 main-发现-超话
