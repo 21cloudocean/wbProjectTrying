@@ -29,6 +29,8 @@ Global Styles
   --clr-font: var(--clr-grey-10);
   --width-nav-icons: 3.5rem;
   --border-thin-grey: solid 1px var(--clr-grey-1);
+  /* --small-word-space: 1px; */
+  --small-letter-space: 1px;
 }
 
 * {
@@ -643,7 +645,7 @@ main-发现-趋势
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .selection.trend {
   display: grid;
@@ -654,6 +656,7 @@ main-发现-趋势
   justify-items: center;
   text-align: center;
   row-gap: 2px;
+  padding-top: 5px;
 }
 .trend-icon {
   font-size: 1.5rem;
@@ -684,7 +687,7 @@ main-发现-趋势
 .optional {
   background-color: var(--clr-white);
   padding: 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 0.8rem;
 }
 .optional a:visited {
@@ -774,7 +777,7 @@ main-发现-趋势
   color: var(--clr-gold);
 }
 .usually-visit-container {
-  padding: 10px 0;
+  padding: 10px 5px;
   display: flex;
 }
 .usually-visit-card {
@@ -796,6 +799,39 @@ main-发现-趋势
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   word-break: break-all;
+}
+.hot-topic-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5px;
+  column-gap: 20px;
+  padding: 5px;
+}
+.hot-topic-tag {
+  display: flex;
+  align-items: center;
+}
+.hot-topic-img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.hot-topic-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.hot-topic-text p {
+  font-size: 13px;
+  margin-bottom: 0;
+  /* word-spacing: var(--small-word-space); */
+  letter-spacing: var(--small-letter-space);
+}
+.optional.hot-video {
+  background-color: var(--clr-grey-1);
 }
 /* ===
 main-发现-超话
