@@ -22,6 +22,10 @@ Global Styles
   --clr-orange: orange;
   --clr-identity-blue: #3460e7;
   --clr-identity-red: #ff3819;
+  --clr-mark-bg-red: rgba(255, 56, 25, 0.1);
+  --clr-mark-bg-gold: rgba(255, 215, 0, 0.1);
+  --clr-mark-bg-orange: rgba(255, 165, 0, 0.1);
+  --clr-mark-bg-blue: rgba(52, 96, 231, 0.1);
   --clr-font: var(--clr-grey-10);
   --width-nav-icons: 3.5rem;
   --border-thin-grey: solid 1px var(--clr-grey-1);
@@ -173,20 +177,20 @@ span {
 }
 .purple {
   background-color: var(--clr-purple);
-  color: var(--clr-white);
 }
 .red {
   background-color: var(--clr-identity-red);
-  color: var(--clr-white);
 }
 .blue {
   background-color: var(--clr-identity-blue);
-  color: var(--clr-white);
 }
 .orange {
   background-color: var(--clr-orange);
-  color: var(--clr-white);
 }
+.gold {
+  background-color: var(--clr-gold);
+}
+
 /* ===============================================
 nav
 =============================================== */
@@ -682,8 +686,8 @@ main-发现-趋势
 .trending-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
 }
-
 .trend-tag {
   display: flex;
   align-items: center;
@@ -704,6 +708,20 @@ main-发现-趋势
   font-size: 10px;
   padding: 0 2px;
   margin-left: 5px;
+  font-weight: 550;
+  border-radius: 2px;
+}
+.trend-mark.red {
+  background-color: var(--clr-mark-bg-red);
+  color: var(--clr-identity-red);
+}
+.trend-mark.gold {
+  background-color: var(--clr-mark-bg-gold);
+  color: var(--clr-gold);
+}
+.trend-mark.orange {
+  background-color: var(--clr-mark-bg-orange);
+  color: var(--clr-orange);
 }
 .visitor-content {
   display: grid;
