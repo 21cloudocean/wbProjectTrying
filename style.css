@@ -70,7 +70,12 @@ img:not(.nav-logo) {
   display: block;
   object-fit: cover;
 }
-
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 h1,
 h2,
 h3,
@@ -121,6 +126,9 @@ span {
   h4 {
     line-height: 1;
   }
+}
+video {
+  width: 100%;
 }
 /*  global classes */
 
@@ -833,6 +841,59 @@ main-发现-趋势
 .optional.hot-video {
   background-color: var(--clr-grey-1);
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+}
+.video-play-control {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* padding不管用？ */
+  /* padding: 5px; */
+  /* background-color: black; */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.video-play-control span {
+  color: var(--clr-white);
+}
+.video-play-control i {
+  color: var(--clr-white);
+}
+/* 播放按钮放不到中间 */
+/* .video-play-icon {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+.video-time-control {
+  align-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+.video-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-time-control {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.video-message {
+  white-space: pre-line;
+}
 /* ===
 main-发现-超话
 ===*/
@@ -984,4 +1045,11 @@ main-发现-热门
   width: 85vw;
   display: flex;
   justify-content: space-between;
+}
+
+/*==================================================
+dynamic control
+==================================================*/
+.none {
+  display: none;
 }
