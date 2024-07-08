@@ -187,7 +187,12 @@ span {
 /* ===============================================
 nav
 =============================================== */
-
+.nav-text p {
+  font-weight: 550;
+}
+nav .selected {
+  font-weight: 550;
+}
 /* 消息页 */
 nav {
   position: fixed;
@@ -292,6 +297,17 @@ nav.find .zoom {
   left: 0.35rem;
   color: var(--clr-grey-5);
 }
+/* 我的页 */
+nav.mine {
+  grid-template-rows: 1fr;
+  height: 3.5rem;
+  align-items: center;
+}
+
+.scan-icon {
+  justify-self: flex-start;
+}
+
 /* ==============================================
 main-消息-@我的
 ===============================================*/
@@ -1072,6 +1088,7 @@ main-发现-热门
   width: 85vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /*==================================================
