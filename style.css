@@ -191,7 +191,7 @@ nav
   font-weight: 550;
 }
 nav .selected {
-  font-weight: 550;
+  font-weight: 600;
 }
 /* 消息页 */
 nav {
@@ -207,6 +207,7 @@ nav {
   height: 5rem;
   border-bottom: solid 1px var(--clr-grey-1);
   z-index: 2;
+  /* color: var(--clr-grey-5); */
 }
 .nav-center {
   margin: 0.6rem 0;
@@ -1094,10 +1095,19 @@ main-发现-热门
 /*==================================================
 dynamic control
 ==================================================*/
+/* 还有个.selected，在上面每个部分写了，不在这里再写一遍了 */
 .none {
   display: none;
 }
-
+.rotate {
+  transform: rotate(180deg);
+}
+.invisible {
+  visibility: hidden;
+}
+/*==================================================
+responsive settings
+==================================================*/
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
