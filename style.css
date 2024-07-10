@@ -4,7 +4,8 @@ Global Styles
 ===============
 */
 :root {
-  --clr-grey-1: #dfdfdf;
+  --clr-grey-0: #f8f8f8;
+  --clr-grey-1: #dedede;
   --clr-grey-2: #cccccc;
   --clr-grey-3: #b9b9b9;
   --clr-grey-4: #a6a6a6;
@@ -29,6 +30,7 @@ Global Styles
   --clr-font: var(--clr-grey-10);
   --width-nav-icons: 3.5rem;
   --border-thin-grey: solid 1px var(--clr-grey-1);
+  --border-extreme-thin-grey: solid 1px var(--clr-grey-0);
   /* --small-word-space: 1px; */
   --small-letter-space: 1px;
 }
@@ -303,6 +305,7 @@ nav.mine {
   grid-template-rows: 1fr;
   height: 3.5rem;
   align-items: center;
+  border-bottom: none;
 }
 
 .scan-icon {
@@ -613,9 +616,9 @@ main-消息-私信
 /* .chat .message-info p {
   text-overflow: ellipsis;
 } */
-/* ===
+/* =============================================
 main-主页-关注
-===*/
+=============================================*/
 section.home {
   margin-top: 0;
   /* fix的navbar有多宽，这个padding就有多长 */
@@ -644,9 +647,9 @@ main-主页-推荐
 .selections.home::-webkit-scrollbar {
   display: none;
 }
-/* ===
+/* =============================================
 main-发现-趋势
-===*/
+=============================================*/
 .selections.trends {
   background-color: var(--clr-white);
   display: flex;
@@ -1064,6 +1067,73 @@ main-发现-热门
 }
 .selections.find::-webkit-scrollbar {
   display: none;
+}
+/* =============================================
+main-我的
+=============================================*/
+.section.mine {
+  padding-top: 3.5rem;
+}
+.mine-user {
+  background-color: var(--clr-white);
+  margin-bottom: 10px;
+  padding: 15px;
+  padding-bottom: 20px;
+}
+
+.mine-user-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mine-user-left {
+  display: flex;
+}
+.mine-user-left .mine-user-name {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+.mine-user-left .mine-user-follower {
+  font-size: 0.8rem;
+}
+.user-img.mine-img {
+  width: 60px;
+  height: 60px;
+}
+.mine-user-text {
+  margin: auto 0;
+}
+.mine-user-right i {
+  font-size: 0.7rem;
+  color: var(--clr-grey-5);
+}
+/* card部分 */
+.mine-card {
+  padding: 20px 0;
+  border-bottom: var(--border-extreme-thin-grey);
+}
+.mine-card-container {
+  margin-bottom: 10px;
+}
+.mine-card-container p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+.mine-card-container i {
+  font-size: 1rem;
+}
+.mine-card-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mine-card-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.mine-right span {
+  font-size: 0.74rem;
 }
 
 /*==================================================
