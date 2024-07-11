@@ -4,6 +4,7 @@ Global Styles
 ===============
 */
 :root {
+  --clr-transparent: rgba(0, 0, 0, 0);
   --clr-grey-0: #f8f8f8;
   --clr-grey-1: #dedede;
   --clr-grey-2: #cccccc;
@@ -311,7 +312,46 @@ nav.mine {
 .scan-icon {
   justify-self: flex-start;
 }
-
+/* 个人页 */
+nav.selfpage {
+  background: url(./pic.jpg) center/cover no-repeat;
+  position: static;
+  display: block;
+  height: 10rem;
+}
+nav.selfpage p,
+nav.selfpage i,
+nav.selfpage span {
+  color: var(--clr-grey-1);
+}
+nav.selfpage p {
+  font-size: 0.9rem;
+  margin-bottom: 0%;
+}
+nav.selfpage span {
+  font-size: 0.75rem;
+  margin: 0;
+}
+.selfpage .nav-center {
+  height: 3.5rem;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+.selfpage .nav-left {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  text-align: start;
+}
+.selfpage .nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 /* ==============================================
 main-消息-@我的
 ===============================================*/
