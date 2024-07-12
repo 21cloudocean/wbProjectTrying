@@ -30,7 +30,11 @@
     <div class="selfpage-title">
       <div class="self-page-title-center">
         <div class="usericon">
-          <div class="user-img selfpage-img"> <img src="./pic.jpg" alt=""></div>
+          <div class="title-img-container">
+            <div class="user-img selfpage-title-img-container"> <img class="page-title-img" src="./pic.jpg" alt=""><i
+                class="fa-solid fa-crown identity gold"></i>
+            </div>
+          </div>
           <div class="title-icons">
             <i class="fa-solid fa-bell"></i>
             <i class="fa-solid fa-envelope"></i>
@@ -40,13 +44,20 @@
             </div>
           </div>
         </div>
+        <div class="title-name">
+          <h3>这是一个随便取用来测试的昵称</h3>
+        </div>
         <div class="selfpage-title-text">
-          <p class="user-status">
-            认证：萌宠博主
-          </p>
-          <p class="user-intro">
-            简介：这是一个神秘的人，什么都没有写。
-          </p>
+          <!-- 简介超出一行要省略+展开 -->
+          <div class="selfpage-title-text-ellipsis">
+            <p class="user-status">
+              认证：萌宠博主
+            </p>
+            <p class="user-intro">
+              简介：这是一个神秘的人，什么都没有写。
+            </p>
+          </div>
+          <span class="unfold">展开</span>
         </div>
         <div class="fans-following">
           <div class="following-num title-num">

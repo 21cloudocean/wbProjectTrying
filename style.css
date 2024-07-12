@@ -1176,6 +1176,46 @@ main-我的
   font-size: 0.74rem;
 }
 
+/* =============================================
+分支-个人主页-selfpage
+=============================================*/
+section.selfpage {
+  padding: 0;
+}
+.selfpage-title {
+  padding: 10px;
+  background-color: var(--clr-white);
+}
+.usericon {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+}
+.title-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  text-align: center;
+}
+.title-img-container {
+  position: relative;
+}
+.selfpage-title-img-container {
+  height: 90px;
+  width: 90px;
+  position: relative;
+  bottom: 2.25rem;
+  border: solid 0.2rem var(--clr-white);
+}
+.page-title-img {
+  border-radius: 50%;
+}
+.selfpage-title-img-container .identity {
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: translateX(15%);
+}
 /*==================================================
  footer 
 ==================================================*/
