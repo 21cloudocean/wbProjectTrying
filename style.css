@@ -314,10 +314,13 @@ nav.mine {
 }
 /* 个人页 */
 nav.selfpage {
-  background: url(./pic.jpg) center/cover no-repeat;
-  position: static;
+  position: fixed;
   display: block;
-  height: 10rem;
+  height: 4rem;
+  top: 0;
+  background-color: var(--clr-transparent);
+  border-bottom: none;
+  z-index: 3;
 }
 /* nav.selfpage .nav-center {
   position: fixed;
@@ -354,6 +357,13 @@ nav.selfpage span {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.nav-pic {
+  height: 8rem;
+  background: url(./pic.jpg) center/cover no-repeat;
+  position: sticky;
+  top: -3.5rem;
+  z-index: 2;
 }
 /* ==============================================
 main-消息-@我的
@@ -1217,6 +1227,7 @@ section.selfpage {
   position: relative;
   bottom: 2.25rem;
   border: solid 0.2rem var(--clr-white);
+  z-index: 4;
 }
 .page-title-img {
   border-radius: 50%;
@@ -1300,6 +1311,28 @@ section.selfpage {
   height: 60px;
   width: 60px;
   flex-shrink: 0;
+}
+.wb-num-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  position: sticky;
+  top: 4.5rem;
+  background-color: var(--clr-grey-1);
+  z-index: 2;
+}
+.wb-num-filter span {
+  font-size: 0.75rem;
+}
+.wb-num-filter-right {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.wb-num-filter-right span,
+.wb-num-filter-right i {
+  color: var(--clr-link-blue);
 }
 /*==================================================
  footer 
