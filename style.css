@@ -684,6 +684,9 @@ section.home {
 .home .one-two-pic.one img {
   height: auto;
 }
+.user-selfpage-link:visited {
+  color: var(--clr-grey-10);
+}
 /* ===
 main-主页-推荐
 ===*/
@@ -1334,6 +1337,73 @@ section.selfpage {
 .wb-num-filter-right i {
   color: var(--clr-link-blue);
 }
+
+/* ======
+分支-热搜榜
+=====*/
+section.trendlist {
+  padding-top: 5rem;
+}
+.trendlist-intro {
+  padding: 10px;
+}
+.trendlist-intro span {
+  font-size: 0.8rem;
+}
+.trend-card {
+  padding: 10px;
+  height: 3rem;
+  border-bottom: var(--border-extreme-thin-grey);
+}
+.trend-card-center {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+}
+.trend-card-center p {
+  margin-bottom: 0;
+}
+.trend-card-left {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 1.5rem;
+}
+.trend-card-left i {
+  color: var(--clr-identity-red);
+  margin-left: 0;
+}
+.trend-card-left span {
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+.num-red {
+  color: var(--clr-identity-red);
+}
+.num-orange {
+  color: var(--clr-orange);
+}
+
+.trend-card-middle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.trend-card-middle span {
+  font-size: 0.7rem;
+}
+.trend-card-right {
+  width: 1.5rem;
+  text-align: end;
+}
+.trend-card-right .trend-mark {
+  font-size: 0.75rem;
+}
+
 /*==================================================
  footer 
 ==================================================*/
