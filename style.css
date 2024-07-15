@@ -274,16 +274,26 @@ nav.home .nav-center .right-icon {
 nav.home {
   position: relative;
 }
+
+.menu-banner {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  inset: 0;
+  z-index: 5;
+}
 .menu {
   background-color: var(--clr-white);
   position: absolute;
   top: 3rem;
   left: 50vw;
-  transform: translateX(-50%);
+  transform: translateX(-55%);
   width: 10rem;
   /* padding: 10px; */
   border-radius: 10px;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+  z-index: 6;
 }
 .menu-center {
   height: 20rem;
@@ -298,6 +308,9 @@ nav.home {
   height: 2.5rem;
   border-bottom: var(--border-extreme-thin-grey);
   padding: 10px;
+}
+.menu-list-line p {
+  font-size: 0.9rem;
 }
 .menu-list-line i {
   display: none;
