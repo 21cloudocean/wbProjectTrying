@@ -251,6 +251,10 @@ nav {
 nav.home {
   grid-template-rows: 1fr;
   height: 3.5rem;
+  align-items: center;
+}
+nav.home .nav-center .right-icon {
+  align-items: center;
 }
 .nav-text.home {
   display: flex;
@@ -267,6 +271,57 @@ nav.home {
   height: 40px;
   margin-bottom: 5px;
 }
+nav.home {
+  position: relative;
+}
+.menu {
+  background-color: var(--clr-white);
+  position: absolute;
+  top: 3rem;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 10rem;
+  /* padding: 10px; */
+  border-radius: 10px;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+}
+.menu-center {
+  height: 20rem;
+  overflow: scroll;
+}
+.menu-center::-webkit-scrollbar {
+  display: none;
+}
+.menu-list-line {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+  border-bottom: var(--border-extreme-thin-grey);
+  padding: 10px;
+}
+.menu-list-line i {
+  display: none;
+}
+.menu-list-line.selected i {
+  display: block;
+}
+.menu-intro {
+  background-color: var(--clr-grey-0);
+  padding: 5px;
+}
+.menu-intro span {
+  font-size: 0.75rem;
+}
+.menu .a-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.menu .a-container a {
+  color: var(--clr-link-blue);
+}
+
 /* 发现页 */
 nav.find .nav-center {
   grid-template-columns: 1fr auto;
