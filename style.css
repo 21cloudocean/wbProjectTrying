@@ -252,7 +252,10 @@ nav.home {
   grid-template-rows: 1fr;
   height: 3.5rem;
   align-items: center;
+  /* position: relative; */
+  padding: 0;
 }
+
 nav.home .nav-center .right-icon {
   align-items: center;
 }
@@ -270,9 +273,6 @@ nav.home .nav-center .right-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 5px;
-}
-nav.home {
-  position: relative;
 }
 
 .menu-banner {
