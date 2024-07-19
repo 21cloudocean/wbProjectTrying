@@ -17,6 +17,7 @@ Global Styles
   --clr-grey-9: #464646;
   --clr-grey-10: #333333;
   --clr-white: #fff;
+  --clr-black: black;
   --clr-grey: grey;
   --clr-purple: #6717cf;
   --clr-link-blue: #3681ad;
@@ -433,6 +434,27 @@ nav.selfpage span {
   top: -3.5rem;
   z-index: 2;
 }
+nav.videopage {
+  grid-template-rows: 1fr;
+  align-items: center;
+  position: fixed;
+  background-color: var(--clr-transparent);
+  border-bottom: none;
+}
+nav.videopage .nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.videopage .nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav.videopage i {
+  color: var(--clr-white);
+}
+
 /* ==============================================
 main-消息-@我的
 ===============================================*/
@@ -1471,7 +1493,34 @@ section.trendlist {
 .trend-card-right .trend-mark {
   font-size: 0.75rem;
 }
+/* ======
+分支-视频播放页
+=====*/
+.videopage-video-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--clr-black);
+}
+video.videopage-video {
+  object-fit: contain;
+}
 
+.videopage-playcontrol .video-play-icon {
+  font-size: 3rem;
+  opacity: 0.7;
+  /* background-color: white; */
+}
+.videopage-playcontrol .video-play-icon i {
+  /*实现文字颜色线性渐变效果*/
+  background: linear-gradient(
+    to bottom right,
+    var(--clr-white),
+    var(--clr-transparent)
+  );
+  -webkit-background-clip: text; /*将设置的背景颜色限制在文字中*/
+  -webkit-text-fill-color: transparent; /*给文字设置成透明*/
+  text-shadow: -1px -1px 10px rgba(0, 0, 0, 0.1);
+}
 /*==================================================
  footer 
 ==================================================*/
