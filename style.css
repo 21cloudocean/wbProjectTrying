@@ -1521,6 +1521,81 @@ video.videopage-video {
   -webkit-text-fill-color: transparent; /*给文字设置成透明*/
   text-shadow: -1px -1px 10px rgba(0, 0, 0, 0.1);
 }
+.videopage-bottom-intro {
+  position: fixed;
+  background-color: transparent;
+  bottom: 3rem;
+  left: 0;
+}
+.videopage-bottom-intro h4,
+.videopage-bottom-intro p {
+  color: var(--clr-grey-0);
+  padding-bottom: 0;
+}
+.videopage-content {
+  padding: 20px;
+}
+.videopage-content .img-container {
+  position: relative;
+  transform: scale(70%);
+}
+.videopage-content .user {
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 3px;
+}
+.videopage-content .user-info {
+  display: block;
+}
+.videopage-introtext-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  width: 80%;
+}
+.videopage-introtext-container {
+  width: 90%;
+  display: flex;
+}
+
+.videopage-introtext-container .unfold {
+  color: var(--clr-white);
+  font-weight: 550;
+}
+/* 进度条 */
+.progress-bar-parent {
+  height: 3px;
+  width: 100vw;
+  background-color: var(--clr-grey-10);
+  position: relative;
+}
+.progress-bar {
+  width: 50%;
+  height: 3px;
+  background-color: var(--clr-grey-1);
+}
+.progress-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--clr-white);
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+/* 视频页footer */
+.videopage-footer-icon-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.videopage-footer-icon-container i {
+  color: var(--clr-grey-0);
+}
 /*==================================================
  footer 
 ==================================================*/
