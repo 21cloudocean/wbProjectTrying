@@ -1012,7 +1012,6 @@ main-发现-趋势
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 1;
 }
 .video-play-control span {
   color: var(--clr-white);
@@ -1020,6 +1019,7 @@ main-发现-趋势
 .video-play-control i {
   color: var(--clr-white);
 }
+
 /* 播放按钮放不到中间 */
 /* .video-play-icon {
   width: 100%;
