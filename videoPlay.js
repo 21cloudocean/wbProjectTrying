@@ -21,6 +21,7 @@ window.onload = function () {
     progressIcon.style.left = e.offsetX + 'px'
     video.currentTime = (e.offsetX / wholeBar.clientWidth) * video.duration
     video.play()
+    videoPlayControl.classList.add('none')
   })
 
   // 点击视频后视频暂停
