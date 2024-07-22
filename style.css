@@ -1565,6 +1565,29 @@ video.videopage-video {
   color: var(--clr-white);
   font-weight: 550;
 }
+/* 全屏键 */
+.progress-bar-container {
+  position: relative;
+}
+.whole-screen-icon {
+  background-color: var(--clr-grey-10);
+  position: absolute;
+  right: 15px;
+  top: -2.5rem;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whole-screen-icon i {
+  color: var(--clr-white);
+}
+.show-intro {
+  display: none;
+}
 /* 进度条 */
 .progress-bar-parent {
   height: 3px;
@@ -1634,6 +1657,20 @@ dynamic control
 }
 .invisible {
   visibility: hidden;
+}
+.whole-screen .hide-intro {
+  display: none;
+}
+.whole-screen .show-intro {
+  display: block;
+}
+.whole-screen .videopage-content {
+  display: none;
+}
+.whole-screen .videopage-footer-icon-container {
+  visibility: hidden;
+  /* z-index想让footer的内容点击无效，不知道成功没有 */
+  z-index: -1;
 }
 /*==================================================
 responsive settings

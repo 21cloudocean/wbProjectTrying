@@ -1,12 +1,17 @@
 window.onload = function () {
   // elements
+  const videoPageBottom = document.querySelector('.videopage-bottom-intro')
+  const wholeScreenIcon = document.querySelector('.whole-screen-icon')
   const video = document.querySelector('video')
   const videoPlayControl = document.querySelector('.videopage-playcontrol')
   // const videoPlayIcon = document.querySelector('.video-play-icon')
   const wholeBar = document.querySelector('.progress-bar-parent')
   const currentBar = document.querySelector('.progress-bar')
   const progressIcon = document.querySelector('.progress-icon')
-
+  // 全屏按钮
+  wholeScreenIcon.addEventListener('click', function () {
+    videoPageBottom.classList.toggle('whole-screen')
+  })
   // 进度条所需时间
   let timer = setInterval(function () {
     let timePlayed = video.currentTime
