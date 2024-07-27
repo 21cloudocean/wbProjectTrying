@@ -49,6 +49,9 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 i {
   color: var(--clr-font);
   margin-left: 5px;
